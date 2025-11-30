@@ -28,7 +28,7 @@ function Carousel() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 4000); // auto slide every 4 sec
+    }, 4000); 
     return () => clearInterval(timer);
   }, []);
 
