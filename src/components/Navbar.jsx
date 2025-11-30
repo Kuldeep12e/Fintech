@@ -50,25 +50,26 @@ const Navbar = () => {
 
       
         <img
-          src={toggle ? close : menu}
-          alt="menu"
-          className="w-[28px] h-[28px] object-contain brightness-0 cursor-pointer"
-          onClick={() => setToggle(!toggle)}
-        />
+        src={toggle ? close : menu}
+        alt="menu"
+        className="w-[28px] h-[28px] object-contain cursor-pointer invert z-30"
+        onClick={() => setToggle(!toggle)}
+      />
+
       </div>
 
      
       <div
         className={`${
           toggle ? "flex" : "hidden"
-        } flex-col p-6 bg-white shadow-xl absolute top-16 right-4 w-[220px] rounded-xl z-20`}
+        } flex-col p-6  shadow-xl absolute top-14 bg-slate-600 right-4 w-[220px] rounded-xl z-20`}
       >
         <ul className="flex flex-col gap-4">
           {navLinks.map((nav) => (
             <li
               key={nav.id}
               className={`text-[16px] cursor-pointer font-medium ${
-                active === nav.title ? "text-secondary" : "text-gray-700"
+                active === nav.title ? "text-secondary" : "text-white"
               }`}
               onClick={() => {
                 setActive(nav.title);
