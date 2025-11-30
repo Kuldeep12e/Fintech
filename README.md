@@ -1,4 +1,4 @@
-# 💳 Fintech Website
+# Fintech Website
 
 A modern and responsive Fintech web application built using **React**, **Tailwind CSS**, and **Framer Motion**.  
 This project focuses on delivering a smooth, animated, and secure UI experience — inspired by the latest fintech product designs.
@@ -8,7 +8,7 @@ This project focuses on delivering a smooth, animated, and secure UI experience 
 
 ![Homepage Screenshot](./Homepage.png)
 ![Developer Screenshot](./Developer.png)
-![Service Screenshot](./Developer.png)
+![Service Screenshot](./Service.png)
 
 
 ## 🚀 Tech Stack
