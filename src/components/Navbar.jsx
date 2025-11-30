@@ -7,13 +7,12 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className="w-full flex py-2 px-2 md:px-8 justify-between items-center navbar">
-      
-     
+    <nav className="w-full flex py-3 px-4 md:px-8 justify-between items-center navbar">
+
       <img
         src={logo}
         alt="fintech"
-        className="w-[140px] sm:w-[160px] object-contain"
+        className="w-[130px] sm:w-[150px] object-contain"
       />
 
      
@@ -31,7 +30,7 @@ const Navbar = () => {
         ))}
       </ul>
 
-      {/* Desktop Buttons */}
+     
       <div className="hidden md:flex items-center gap-4">
         <button className="font-poppins text-[16px] font-medium text-secondary">
           Login
@@ -41,42 +40,45 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu Button */}
-      <div className="md:hidden flex justify-end items-center">
+     
+      <div className="flex md:hidden items-center gap-4">
+
+      
+        <button className="font-poppins text-[14px] font-medium text-secondary border border-secondary px-3 py-1 rounded-md">
+          Login
+        </button>
+
+      
         <img
           src={toggle ? close : menu}
           alt="menu"
-          className="w-[28px] h-[28px] object-contain brightness-0"
+          className="w-[28px] h-[28px] object-contain brightness-0 cursor-pointer"
           onClick={() => setToggle(!toggle)}
         />
+      </div>
 
-        {/* Mobile Menu */}
-        <div
-          className={`${
-            toggle ? "flex" : "hidden"
-          } flex-col p-6 bg-white shadow-xl absolute top-16 right-4 w-[200px] rounded-xl`}
-        >
-          <ul className="flex flex-col gap-4 mb-4">
-            {navLinks.map((nav) => (
-              <li
-                key={nav.id}
-                className={`font-poppins text-[16px] cursor-pointer ${
-                  active === nav.title ? "text-secondary" : "text-gray-600"
-                }`}
-                onClick={() => {
-                  setActive(nav.title);
-                  setToggle(false);
-                }}
-              >
-                <a href={`#${nav.id}`}>{nav.title}</a>
-              </li>
-            ))}
-          </ul>
-
-          <button className="w-full font-poppins text-[14px] bg-secondary text-white py-2 rounded-lg hover:opacity-90 transition">
-            Login
-          </button>
-        </div>
+     
+      <div
+        className={`${
+          toggle ? "flex" : "hidden"
+        } flex-col p-6 bg-white shadow-xl absolute top-16 right-4 w-[220px] rounded-xl z-20`}
+      >
+        <ul className="flex flex-col gap-4">
+          {navLinks.map((nav) => (
+            <li
+              key={nav.id}
+              className={`text-[16px] cursor-pointer font-medium ${
+                active === nav.title ? "text-secondary" : "text-gray-700"
+              }`}
+              onClick={() => {
+                setActive(nav.title);
+                setToggle(false);
+              }}
+            >
+              <a href={`#${nav.id}`}>{nav.title}</a>
+            </li>
+          ))}
+        </ul>
       </div>
     </nav>
   );
