@@ -22,7 +22,7 @@ const Navbar = () => {
           <li
             key={nav.id}
             className={`font-poppins font-normal cursor-pointer text-[16px] ${
-              active === nav.title ? "text-secondary" : "text-gray-600"
+              active === nav.title ? "text-secondary" : "text-gray-700"
             }`}
             onClick={() => setActive(nav.title)}
           >

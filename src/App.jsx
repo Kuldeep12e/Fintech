@@ -26,15 +26,15 @@ const App = () => (
         <CodeBlock
           heading="Fast & Secure Payment Integration"
           subHeading="Start accepting online payments in just a few lines of code."
-          codeText={`// Initialize Payment Gateway
+          codeText={`
         const PaymentGateway = new Fintech({
           key: process.env.FINTECH_API,
           secret: process.env.FINTECH_API_SECRET,
         });
 
-        // Create a new Payment Order
+        
         const payment = await PaymentGateway.createPayment({
-          amount: 50000, // Amount in paise (₹500)
+          amount: 50000, // Amount in Rupees (₹500)
           currency: "INR",
           receipt: "receipt#1",
           notes: {
